@@ -1,0 +1,11 @@
+!!! 5
+%h1 MisawaSolr
+
+%h2 Test
+%form(action="/search")
+  %input(type="input" placeholder="keyword" name="q")
+  %button(type="submit") 検索
+
+%h2 API
+GET /search?q=query_string
+
