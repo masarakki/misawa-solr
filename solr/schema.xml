@@ -8,15 +8,14 @@
     <field name="cid" type="pint" indexed="true" stored="true" />
     <field name="eid" type="pint" indexed="true" stored="true" />
     <field name="body" type="unigram" indexed="true" stored="true" />
-    <field name="combined" type="unigram" indexed="true" stored="false" multiValued="true" />
+    <field name="text" type="unigram" indexed="true" stored="false" multiValued="true" />
     <field name="_version_" type="long" indexed="true" stored="true"/>
   </fields>
 
   <uniqueKey>id</uniqueKey>
-  <copyField source="title" dest="combined" />
-  <copyField source="body" dest="combined" />
-  <copyField source="character" dest="combined" />
-  <defaultSearchField>combined</defaultSearchField>
+  <copyField source="title" dest="text" />
+  <copyField source="body" dest="text" />
+  <copyField source="character" dest="text" />
   <solrQueryParser defaultOperator="AND" />
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
