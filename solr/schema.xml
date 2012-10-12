@@ -16,7 +16,8 @@
   <copyField source="title" dest="combined" />
   <copyField source="body" dest="combined" />
   <copyField source="character" dest="combined" />
-
+  <defaultSearchField>combined</defaultSearchField>
+  <solrQueryParser defaultOperator="AND" />
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
